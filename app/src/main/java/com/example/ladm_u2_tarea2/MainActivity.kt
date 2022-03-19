@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity() {
 
     suspend fun parpadearTV(){
         while (true) {
-            binding.tvCargado.setText("PRESIONA START PARA CONTINUAR")
+            binding.tvCargado.setText(">> PRESIONA START PARA CONTINUAR <<")
             delay(2000)
             binding.tvCargado.setText("")
             delay(1000)
