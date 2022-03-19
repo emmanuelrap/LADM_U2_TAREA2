@@ -33,7 +33,7 @@ class HiloCargando(act: MainActivity) : Thread() {
             cargarMapa() //Simula que carga el mapa
 
             act.runOnUiThread { //ya que carga el mapa muestra el aviso de continuar
-                act.binding.tvCargado.setText("PRESIONA ENTER PARA CONTINUAR")
+                act.binding.tvCargado.setText("> PRESIONA ENTER PARA CONTINUAR <")
             }
 
            cambiarImagen()
@@ -59,7 +59,7 @@ class HiloCargando(act: MainActivity) : Thread() {
         while(true) {
             act.runOnUiThread {
                 act.binding.imageView2.setImageResource(arregloImagenes[Random.nextInt(12)])
-                sleep(4000)
+                sleep(5000)
             }
         }
     }

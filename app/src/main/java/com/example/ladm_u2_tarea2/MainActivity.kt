@@ -1,5 +1,6 @@
 package com.example.ladm_u2_tarea2
 
+import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -14,6 +15,7 @@ import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
+    var mp: MediaPlayer?=null
     var index=0
     val arregloConsejos = arrayOf("Puedes moverte sigilosamente si precionas B",
         "Si te quedas mucho tiempo parado, tu personaje puede morir","Si no comes lo suficiente perderas vida poco a poco",
@@ -35,10 +37,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val hilo = HiloCargando(this)
-        hilo.start()
+        //val hilo = HiloCargando(this)
+       // hilo.start()
 
-        /*
+
         GlobalScope.launch(Dispatchers.Main) {
             cargarMapa()
             binding.tvCargado.setText("PRESIONA ENTER PARA CONTINUAR")
@@ -52,23 +54,43 @@ class MainActivity : AppCompatActivity() {
           cambiarImagen()
         }
 
+        GlobalScope.launch(Dispatchers.Main) {
+            ponerCancion()
+        }
+
        binding.button.setOnClickListener {
             if(index==arregloConsejos.size-1)
                 index=0
             binding.textView.text=arregloConsejos[index]
             index++
         }
-*/
+
     }
 
     suspend fun cargarMapa(){
         timer.start()
         delay(20000L)
+        parpadearTV()
     }
     suspend fun cambiarImagen(){
         while(true) {
                 binding.imageView2.setImageResource(arregloImagenes[Random.nextInt(13)])
-                delay(4000)
+                delay(5000)
         }
     }
+
+    fun ponerCancion(){
+        mp= MediaPlayer.create(this,R.raw.cancionelden)
+        mp?.start()
+    }
+
+    suspend fun parpadearTV(){
+        while (true) {
+            binding.tvCargado.setText("PRESIONA START PARA CONTINUAR")
+            delay(2000)
+            binding.tvCargado.setText("")
+            delay(1000)
+        }
+    }
+
 }

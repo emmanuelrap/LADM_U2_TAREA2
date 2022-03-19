@@ -21,27 +21,28 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="166dp"
-        android:layout_height="65dp"
+        android:layout_width="120dp"
+        android:layout_height="63dp"
         android:layout_marginRight="20dp"
         android:text="Siguiente Consejo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:background="@color/white"
         android:id="@+id/textView"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="92dp"
         android:text="Consejos"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:textStyle="bold"
         android:textColor="@color/white"
         android:id="@+id/tvCargado"
         android:layout_width="wrap_content"
