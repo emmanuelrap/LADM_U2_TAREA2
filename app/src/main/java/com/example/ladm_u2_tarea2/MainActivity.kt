@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     val arregloConsejos = arrayOf("Puedes moverte sigilosamente si precionas B",
         "Si te quedas mucho tiempo parado, tu personaje puede morir","Si no comes lo suficiente perderas vida poco a poco",
         "Ten cuidado al caer, puede que le lastimes o mueras")
-    var arregloImagenes = arrayOf(R.drawable.fondo1,R.drawable.fondo2,R.drawable.fondo3,R.drawable.fondo4,R.drawable.fondo5,R.drawable.fondo6,
+    var arregloImagenes = arrayOf(R.drawable.fondo1,R.drawable.fondo2,R.drawable.fondo3,R.drawable.fondo4,R.drawable.fondo5,
         R.drawable.fondo7,R.drawable.fondo8,R.drawable.fondo9,R.drawable.fondo10,R.drawable.fondo11,R.drawable.fondo12,R.drawable.fondo13)
     var contador=0
     val timer = object : CountDownTimer(30000,200){
