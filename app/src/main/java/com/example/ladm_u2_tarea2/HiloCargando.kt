@@ -6,7 +6,7 @@ import kotlin.random.Random
 
 class HiloCargando(act: MainActivity) : Thread() {
     var index=0
-    var arregloImagenes = arrayOf(R.drawable.fondo1,R.drawable.fondo2,R.drawable.fondo3,R.drawable.fondo4,R.drawable.fondo5,R.drawable.fondo6,
+    var arregloImagenes = arrayOf(R.drawable.fondo1,R.drawable.fondo2,R.drawable.fondo3,R.drawable.fondo4,R.drawable.fondo5,
         R.drawable.fondo7,R.drawable.fondo8,R.drawable.fondo9,R.drawable.fondo10,R.drawable.fondo11,R.drawable.fondo12,R.drawable.fondo13)
     val arregloConsejos = arrayOf("Puedes moverte sigilosamente si precionas B, los enemigos no te detectarán",
         "Si te quedas mucho tiempo parado, tu personaje puede morir","Si no comes lo suficiente perderas vida poco a poco",
