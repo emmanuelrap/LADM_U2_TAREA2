@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     var arregloImagenes = arrayOf(R.drawable.fondo1,R.drawable.fondo2,R.drawable.fondo3,R.drawable.fondo4,R.drawable.fondo5,R.drawable.fondo6,
         R.drawable.fondo7,R.drawable.fondo8,R.drawable.fondo9,R.drawable.fondo10,R.drawable.fondo11,R.drawable.fondo12,R.drawable.fondo13)
     var contador=0
-    val timer = object : CountDownTimer(30000,150){
+    val timer = object : CountDownTimer(30000,200){
         override fun onTick(p0: Long) {
                 if(contador<=100)
                     binding.tvCargado.setText("Cargando ${contador++}%")
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
 
     suspend fun cargarMapa(){
         timer.start()
-        delay(20000L)
+        delay(25000L)
         parpadearTV()
     }
     suspend fun cambiarImagen(){
